@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .slider-carousel {
+        width: 100%;
+        height: 100vh;
+        /* overflow: hidden; */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+      }
+
+      .carousel-indicators li {
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        margin-top: 30px;
+        margin-bottom: 28px;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 20px;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Optional: Add a semi-transparent background */
+      }
+
+      .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-indicators .active {
+        background-color: white;
+      }
+      p {
+        color: #c7e3d9;
+      }
+      .carousel-item {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="slider-carousel">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        </ol>
+        <div class="carousel-inner" style="color: black">
+          <!-- Item 1 -->
+          <div class="carousel-item active">
+            <div
+              class="image"
+              style="
+                height: 100vh;
+                position: relative;
+                background-color: #1d0363;
+              "
+            >
+              <img
+                src="images/img1 (1).png"
+                alt="..."
+                width="60%"
+                height="60%"
+                style="position: absolute; top: 2%; right: -6%"
+              />
+              <img
+                src="images/img1 (2).png"
+                alt="..."
+                width="60%"
+                height="60%"
+                style="position: absolute; top: 2%; right: 40%"
+              />
+              <div
+                class="carousel-caption py-5 text-left pl-2"
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  background-color: #6411a9;
+                  width: 100%;
+                  height: 50%;
+                "
+              >
+                <img
+                  src="images/mobile1.png"
+                  alt=""
+                  width="50%"
+                  style="
+                    position: absolute;
+                    top: -10%;
+                    left: 5%;
+                    border: 2px solid #6411a9;
+                    border-radius: 4%;
+                    background-color: #fff;
+                  "
+                />
+                <h2>ABC 123</h2>
+                <p>This is sample text for ABC 1</p>
+                <p class="pb-5 pt-4">View case study</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div
+              class="image"
+              style="
+                height: 100vh;
+                position: relative;
+                background-color: #1d0363;
+              "
+            >
+              <img
+                src="images/img2 (2).png"
+                alt="..."
+                width="40%"
+                height="40%"
+                style="
+                  position: absolute;
+                  top: -4%;
+                  right: 0%;
+                  transition: opacity 0.5s ease;
+                "
+              />
+
+              <img
+                src="images/img2 (1).png"
+                alt="..."
+                width="50%"
+                height="40%"
+                style="position: absolute; top: 10%; right: 49%"
+              />
+              <div
+                class="carousel-caption py-5 text-left pl-2"
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  background-color: #6411a9;
+                  width: 100%;
+                  height: 50%;
+                "
+              >
+                <h2>ABC 123</h2>
+                <p>This is sample text for ABC 1</p>
+                <p class="pb-5 pt-4">View case study</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+
+          <div class="carousel-item">
+            <div
+              class="image"
+              style="
+                height: 100vh;
+                position: relative;
+                background-color: #1d0363;
+              "
+            >
+              <img
+                src="images/img3 (2).png"
+                alt="..."
+                width="40%"
+                height="45%"
+                style="position: absolute; top: -13%; right: 0%"
+              />
+
+              <img
+                src="images/img3 (1).png"
+                alt="..."
+                width="60%"
+                height="60%"
+                style="position: absolute; top: 10%; right: 40%"
+              />
+              <div
+                class="carousel-caption py-5 text-left pl-2"
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  background-color: #151649;
+                  width: 100%;
+                  height: 50%;
+                "
+              >
+                <h2>ABC 123</h2>
+                <p>This is sample text for ABC 1</p>
+                <p class="pb-5 pt-4">View case study</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4  -->
+          <div
+            class="carousel-item"
+            style="height: 100vh; position: relative; background-color: #0e131c"
+          >
+            <img
+              src="images/img4 (2).png"
+              alt="..."
+              width="10%"
+              height="10%"
+              style="position: absolute; bottom: 50%; right: -5%"
+            />
+
+            <img
+              src="images/img4 (1).png"
+              alt="..."
+              width="60%"
+              height="20%"
+              style="position: absolute; top: -7%; left: 0%"
+            />
+
+            <img
+              src="images/img4 (3).png"
+              alt="..."
+              width="10%"
+              height="10%"
+              style="position: absolute; top: -8%; right: 0%"
+            />
+
+            <img
+              src="images/img4 (4).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: 22%; left: 10%"
+            />
+
+            <img
+              src="images/img4 (5).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: -3%; left: 50%"
+            />
+            <img
+              src="images/img4 (6).png"
+              alt="..."
+              width="40%"
+              height="20%"
+              style="position: absolute; top: 40%; left: 50%"
+            />
+
+            <div
+              class="carousel-caption py-5 text-left pl-2"
+              style="
+                position: absolute;
+                bottom: 0;
+                background-color: #15243b;
+                width: 100%;
+                height: 50%;
+              "
+            >
+              <h2>ABC 123</h2>
+              <p>This is sample text for ABC 1</p>
+              <p class="pb-5 pt-4">View case study</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div
+            class="carousel-item"
+            style="height: 100vh; position: relative; background-color: #23cfeb"
+          >
+            <img
+              src="images/img5 (3).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: -15%; left: 1%"
+            />
+            <img
+              src="images/img5 (5).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: 25%; left: 1%"
+            />
+            <img
+              src="images/img5 (1).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: -1%; left: 40%"
+            />
+            <img
+              src="images/img5 (2).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: 40%; left: 40%"
+            />
+
+            <img
+              src="images/img5 (4).png"
+              alt="..."
+              width="40%"
+              height="40%"
+              style="position: absolute; top: 15%; right: -17%"
+            />
+
+            <div
+              class="carousel-caption py-5 text-left pl-2"
+              style="
+                position: absolute;
+                bottom: 0;
+                background-color: #134ca2;
+                width: 100%;
+                height: 50%;
+              "
+            >
+              <h2>ABC 123</h2>
+              <p>This is sample text for ABC 1</p>
+              <p class="pb-5 pt-4">View case study</p>
+            </div>
+          </div>
+
+          <!--Item 6   -->
+          <div
+            class="carousel-item"
+            style="height: 100vh; position: relative; background-color: #0e131c"
+          >
+            <img
+              src="images/img6.jpg"
+              alt="..."
+              width="100%"
+              height="50%"
+              style="position: absolute"
+            />
+            <img
+              src="images/erp-app-development-service.png"
+              alt="..."
+              width="100%"
+              height="50%"
+              style="position: absolute"
+            />
+
+            <div
+              class="carousel-caption py-5 text-left pl-2"
+              style="
+                position: absolute;
+                bottom: 0;
+                background-color: #022b92;
+                width: 100%;
+                height: 50%;
+              "
+            >
+              <h2>ABC 123</h2>
+              <p>This is sample text for ABC 1</p>
+              <p class="pb-5 pt-4">View case study</p>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div
+            class="carousel-item"
+            style="height: 100vh; position: relative; background-color: #01b76a"
+          >
+            <img
+              src="images/img7 (1).png"
+              alt="..."
+              width="50%"
+              height="50%"
+              style="position: absolute; top: 15%; left: 50%"
+            />
+
+            <img
+              src="images/img7 (2).png"
+              alt="..."
+              width="70%"
+              height="70%"
+              style="position: absolute; top: 7%; left: 0%"
+            />
+
+            <div
+              class="carousel-caption py-5 text-left pl-2"
+              style="
+                position: absolute;
+                bottom: 0;
+                background-color: #01824d;
+                width: 100%;
+                height: 50%;
+              "
+            >
+              <img
+                src="images/mobile.png"
+                alt=""
+                width="50%"
+                style="position: absolute; top: -10%; left: 5%"
+              />
+              <h2>ABC 123</h2>
+              <p>This is sample text for ABC 1</p>
+              <p class="pb-5 pt-4">View case study</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- End of coursell item  -->
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            style="display: none"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon"
+            aria-hidden="true"
+            style="display: none"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var touchStartX = 0;
+        var touchEndX = 0;
+        $("#carouselExampleIndicators").on("touchstart", function (e) {
+          touchStartX = e.originalEvent.touches[0].clientX;
+        });
+        $("#carouselExampleIndicators").on("touchmove", function (e) {
+          touchEndX = e.originalEvent.touches[0].clientX;
+        });
+        $("#carouselExampleIndicators").on("touchend", function (e) {
+          var touchDistance = touchEndX - touchStartX;
+          if (touchDistance > 0) {
+            $(this).carousel("prev");
+          } else if (touchDistance < 0) {
+            $(this).carousel("next");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.col-md-5{
+    background-color: #222;
+}
+
+/* Common styles for all screen sizes */
+.center-svg {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.center-svg svg {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -199%);
+}
+
+/* Responsive styles for smaller screens (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+    .center-svg svg {
+        left: 50%; /* Center horizontally for smaller screens */
+        transform: translate(-50%, -199%);
+    }
+}
+
+/* Additional responsive styles for even smaller screens (adjust as needed) */
+@media (max-width: 576px) {
+    .center-svg svg {
+        left: 50%; /* Center horizontally for even smaller screens */
+        transform: translate(-50%, -250%); /* Adjust the vertical position */
+    }
+}

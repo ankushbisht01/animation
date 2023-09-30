@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,700;&family=Quicksand:wght@400;700&family=Roboto&display=swap");
+      @media (min-width: 768px) {
+        .mob-view {
+          display: none;
+        }
+        .desktop-view {
+          display: block;
+        }
+      }
+      @media (max-width: 768px) {
+        .desktop-view {
+          display: none;
+        }
+        .mob-view {
+          display: block;
+        }
+      }
+      .slider-carousel {
+        width: 100%;
+        height: 100vh;
+        /* overflow: hidden; */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+      }
+
+      .carousel-indicators li {
+        width: 5px;
+        height: 5px;
+        margin: 0 2px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 20px;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Optional: Add a semi-transparent background */
+      }
+
+      .carousel-item {
+        overflow: hidden;
+      }
+      .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-indicators .active {
+        background-color: white;
+      }
+
+      body {
+        font-family: "Roboto", "Public Sans", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .section {
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      @keyframes moveUpDown {
+        0% {
+          transform: translate(-50%, -50%);
+        }
+        50% {
+          transform: translate(-50%, -60%);
+        }
+        100% {
+          transform: translate(-50%, -50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mob-view">
+      <section class="slider-carousel">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+          </ol>
+          <div class="carousel-inner" style="color: black">
+            <!-- Item 1 -->
+            <div class="carousel-item active">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #fff;
+                "
+              >
+                <img
+                  src="images/img1 (1).png"
+                  alt="..."
+                  width="60%"
+                  height="60%"
+                  style="position: absolute; top: 2%; right: -6%"
+                />
+                <img
+                  src="images/img1 (2).png"
+                  alt="..."
+                  width="60%"
+                  height="60%"
+                  style="position: absolute; top: 2%; right: 40%"
+                />
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #6411a9;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <img
+                    src="images/mobile1.png"
+                    alt=""
+                    width="50%"
+                    style="
+                      position: absolute;
+                      top: -10%;
+                      left: 5%;
+                      border: 2px solid #6411a9;
+                      border-radius: 4%;
+                      background-color: #fff;
+                    "
+                  />
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="carousel-item">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #1d0363;
+                "
+              >
+                <img
+                  src="images/img2 (2).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="
+                    position: absolute;
+                    top: -4%;
+                    right: 0%;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+
+                <img
+                  src="images/img2 (1).png"
+                  alt="..."
+                  width="50%"
+                  height="40%"
+                  style="position: absolute; top: 10%; right: 49%"
+                />
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #6411a9;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="carousel-item">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #1d0363;
+                "
+              >
+                <img
+                  src="images/img3 (2).png"
+                  alt="..."
+                  width="40%"
+                  height="45%"
+                  style="position: absolute; top: -13%; right: 0%"
+                />
+
+                <img
+                  src="images/img3 (1).png"
+                  alt="..."
+                  width="60%"
+                  height="60%"
+                  style="position: absolute; top: 10%; right: 40%"
+                />
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #151649;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 4  -->
+            <div class="carousel-item">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #1d0363;
+                "
+              >
+                <img
+                  src="images/img4 (2).png"
+                  alt="..."
+                  width="10%"
+                  height="10%"
+                  style="position: absolute; bottom: 50%; right: -5%"
+                />
+
+                <img
+                  src="images/img4 (1).png"
+                  alt="..."
+                  width="60%"
+                  height="20%"
+                  style="position: absolute; top: -7%; left: 0%"
+                />
+
+                <img
+                  src="images/img4 (3).png"
+                  alt="..."
+                  width="10%"
+                  height="10%"
+                  style="position: absolute; top: -8%; right: 0%"
+                />
+
+                <img
+                  src="images/img4 (4).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: 22%; left: 10%"
+                />
+
+                <img
+                  src="images/img4 (5).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: -3%; left: 50%"
+                />
+                <img
+                  src="images/img4 (6).png"
+                  alt="..."
+                  width="40%"
+                  height="20%"
+                  style="position: absolute; top: 40%; left: 50%"
+                />
+
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #15243b;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="carousel-item">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #23cfeb;
+                "
+              >
+                <img
+                  src="images/img5 (3).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: -15%; left: 1%"
+                />
+                <img
+                  src="images/img5 (5).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: 25%; left: 1%"
+                />
+                <img
+                  src="images/img5 (1).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: -1%; left: 40%"
+                />
+                <img
+                  src="images/img5 (2).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: 40%; left: 40%"
+                />
+
+                <img
+                  src="images/img5 (4).png"
+                  alt="..."
+                  width="40%"
+                  height="40%"
+                  style="position: absolute; top: 15%; right: -17%"
+                />
+
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #134ca2;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+
+            <!--Item 6   -->
+            <div class="carousel-item">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #0e131c;
+                "
+              >
+                <img
+                  src="images/img6.jpg"
+                  alt="..."
+                  width="100%"
+                  height="50%"
+                  style="position: absolute"
+                />
+                <img
+                  src="images/erp-app-development-service.png"
+                  alt="..."
+                  width="100%"
+                  height="50%"
+                  style="position: absolute"
+                />
+
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #022b92;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 7 -->
+            <div class="carousel-item">
+              <div
+                class="image"
+                style="
+                  height: 100vh;
+                  position: relative;
+                  background-color: #01b76a;
+                "
+              >
+                <img
+                  src="images/img7 (1).png"
+                  alt="..."
+                  width="50%"
+                  height="50%"
+                  style="position: absolute; top: 15%; left: 50%"
+                />
+
+                <img
+                  src="images/img7 (2).png"
+                  alt="..."
+                  width="70%"
+                  height="70%"
+                  style="position: absolute; top: 7%; left: 0%"
+                />
+
+                <div
+                  class="carousel-caption py-5 text-left pl-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #01824d;
+                    width: 100%;
+                    height: 50%;
+                  "
+                >
+                  <img
+                    src="images/mobile.png"
+                    alt=""
+                    width="50%"
+                    style="position: absolute; top: -10%; left: 5%"
+                  />
+                  <h2>ABC 123</h2>
+                  <p>This is sample text for ABC 1</p>
+                  <p class="pb-5 pt-4">View case study</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon"
+              style="display: none"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon"
+              style="display: none"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- desktop view -->
+    <div class="section desktop-view d-none d-md-block">
+      <div class="row">
+        <div class="col-md-5 pl-md-5 bgcolors">
+          <div class="text" style="color: aquamarine">
+            <div style="padding-top: 80%">
+              <img
+                src="images/mobile.png"
+                style="padding-bottom: 25px"
+                class="award"
+                alt=""
+                width="25%"
+              />
+
+              <h2>ABC 456</h2>
+              <p>
+                We are the best <br />
+                web development company <br />
+                in the world
+              </p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p>view case study</p>
+              <p class="pr-md-5">skip</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 p-0">
+          <div
+            class="image1"
+            style="
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding-bottom: 90%;
+              display: none;
+              background-color: #cdcbcf;
+            "
+          >
+            <img
+              src="images/img1 (1).png"
+              alt=""
+              style="
+                position: absolute;
+                bottom: 20%;
+                left: 60%;
+                transform: translateX(-50%);
+                width: 30%;
+                height: 60%;
+              "
+            />
+            <img
+              src="images/img1 (2).png"
+              alt=""
+              style="
+                position: absolute;
+                bottom: 20%;
+                left: 35%;
+                transform: translateX(-50%);
+                width: 30%;
+                height: 60%;
+              "
+            />
+          </div>
+
+          <div
+            style="
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding-bottom: 90%;
+              display: none;
+              background-color: #1d0363;
+            "
+            class="image2"
+          >
+            <img
+              src="images/img2 (1).png"
+              alt=""
+              style="
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                transform: translateX(-50%);
+                width: 30%;
+                height: 60%;
+              "
+            />
+            <img
+              src="images/img2 (2).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 30%;
+                right: 20%;
+                transform: translate(50%, -50%);
+                width: 30%;
+                height: 60%;
+              "
+            />
+          </div>
+
+          <div
+            class="image3"
+            style="
+              padding-bottom: 90%;
+              background-color: #151649;
+              display: none;
+            "
+          >
+            <img
+              src="images/img3 (1).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 30%;
+                left: 20%;
+                width: 30%;
+                height: 60%;
+              "
+            />
+            <img
+              src="images/img3 (2).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 17%;
+                right: 20%;
+                transform: translate(50%, -50%);
+                width: 25%;
+                height: 55%;
+              "
+            />
+          </div>
+          <div
+            class="image4"
+            style="
+              padding-bottom: 90%;
+              background-color: #0e131c;
+              display: none;
+            "
+          >
+            <img
+              src="images/img4 (1).png"
+              alt=""
+              style="position: absolute; top: -10%; left: 0"
+            />
+            <img
+              src="images/img4 (2).png"
+              alt=""
+              style="position: absolute; bottom: -7%; right: 0"
+            />
+            <img
+              src="images/img4 (3).png"
+              alt=""
+              style="position: absolute; top: -15%; right: 10%"
+            />
+            <img
+              src="images/img4 (4).png"
+              alt=""
+              style="
+                position: absolute;
+                bottom: 0;
+                left: 12%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+            <img
+              src="images/img4 (5).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+          </div>
+          <div
+            class="image5"
+            style="
+              padding-bottom: 90%;
+              background-color: #23cfeb;
+              display: none;
+            "
+          >
+            <img
+              src="images/img5 (1).png"
+              alt=""
+              style="
+                position: absolute;
+                top: -2%;
+                left: 40%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+            <img
+              src="images/img5 (2).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 70%;
+                left: 40%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+            <img
+              src="images/img5 (3).png"
+              alt=""
+              style="
+                position: absolute;
+                top: -12%;
+                left: 10%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+            <img
+              src="images/img5 (4).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 30%;
+                left: 65%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+            <img
+              src="images/img5 (5).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 60%;
+                left: 10%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+          </div>
+          <div class="image6" style="padding-bottom: 90%; display: none">
+            <img
+              src="images/img6.jpg"
+              alt=""
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+            />
+            <img
+              src="images/erp-app-development-service.png"
+              alt=""
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+            />
+          </div>
+          <div
+            class="image7"
+            style="
+              padding-bottom: 90%;
+              background-color: #01b76a;
+              display: none;
+            "
+          >
+            <img
+              src="images/img7 (1).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 50%;
+                left: 60%;
+                width: 25%;
+                height: 50%;
+              "
+            />
+            <img
+              src="images/img7 (2).png"
+              alt=""
+              style="
+                position: absolute;
+                top: 55%;
+                left: 38%;
+                width: 30%;
+                height: 50%;
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div class="center-svg">
+        <svg
+          version="1.1"
+          id="transring"
+          xmlns="http://www.w3.org/2000/svg"
+          width="299px"
+          height="299px"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 414 414"
+          style="
+            enable-background: new 0 0 414 414;
+            border-radius: 50%;
+            background-color: #222;
+          "
+          xml:space="preserve"
+        >
+          <path
+            id="Transparent_Ring"
+            class="transrg"
+            style="
+              opacity: 0.4;
+              fill: none;
+              stroke: #ffffff;
+              stroke-width: 2;
+              stroke-miterlimit: 10;
+              enable-background: new;
+            "
+            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+            c-47.8,0-91-19.4-122.3-50.7"
+          ></path>
+
+          <path
+            id="Opaque_Ring"
+            class="transrgwht"
+            stroke-dasharray="0,1000"
+            style="
+              fill: none;
+              stroke: white;
+              stroke-width: 2;
+              stroke-miterlimit: 50;
+              stroke-dasharray: 0, 1000;
+            "
+            d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+            c-47.8,0-91-19.4-122.3-50.7"
+          ></path>
+
+          <g id="Dots1" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill1"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro1"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots2" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill2"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro2"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots3" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill3"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro3"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots4" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill4"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro4"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots5" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill5"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro5"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots6" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill6"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro6"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
+              ></path>
+            </g>
+          </g>
+          <g id="Dots7" class="dots-nav">
+            <g>
+              <path
+                class="dotsst dotsfill7"
+                style="fill: rgb(0, 146, 255); opacity: 1"
+                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+              ></path>
+            </g>
+            <g>
+              <path
+                class="dotsstro7"
+                style="
+                  opacity: 1;
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-width: 2;
+                  stroke-miterlimit: 10;
+                "
+                d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"
+              ></path>
+            </g>
+          </g>
+          <!-- add text  -->
+
+          <g id="Text1" class="text-nav" style="display: block">
+            <g>
+              <text
+                class="text01"
+                id="text01"
+                x="-15%"
+                y="15%"
+                text-anchor="right"
+                transform="matrix(1 0 0 1 70.5 100)"
+                style="
+                  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana,
+                    sans-serif;
+                  font-size: 44px;
+                  fill: rgb(255, 255, 255);
+                  padding-bottom: 10px;
+                "
+              >
+                25M+ Downloads
+              </text>
+              <text
+                class="text02"
+                id="text02"
+                x="-15%"
+                y="30%"
+                text-anchor="right"
+                transform="matrix(1 0 0 1 70.5 100)"
+                style="
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-size: 25px;
+                  fill: rgb(255, 255, 255);
+                "
+              >
+                on appstore & google playstore
+              </text>
+            </g>
+          </g>
+
+          <!-- Text 1  -->
+          <g id="Text2" class="text-nav" style="display: none">
+            <g>
+              <text
+                class="text1"
+                id="text1"
+                x="-10%"
+                y="15%"
+                text-anchor="right"
+                transform="matrix(1 0 0 1 70.5 100)"
+                style="
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-size: 25px;
+                  fill: rgb(255, 255, 255);
+                  padding-bottom: 10px;
+                "
+              >
+                25M+ Downloads
+              </text>
+              <text
+                class="text2"
+                id="text2"
+                x="-10%"
+                y="30%"
+                text-anchor="right"
+                transform="matrix(1 0 0 1 70.5 100)"
+                style="
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-size: 50px;
+                  fill: rgb(255, 255, 255);
+                "
+              >
+                on appstore & google playstore
+              </text>
+              <text
+                class="text3"
+                id="text3"
+                x="0%"
+                y="45%"
+                text-anchor="right"
+                transform="matrix(1 0 0 1 70.5 100)"
+                style="
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-size: 30px;
+                  fill: rgb(255, 255, 255);
+                "
+              >
+                Countries
+              </text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jquery for mobile view -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var touchStartX = 0;
+        var touchEndX = 0;
+        $("#carouselExampleIndicators").on("touchstart", function (e) {
+          touchStartX = e.originalEvent.touches[0].clientX;
+        });
+        $("#carouselExampleIndicators").on("touchmove", function (e) {
+          touchEndX = e.originalEvent.touches[0].clientX;
+        });
+        $("#carouselExampleIndicators").on("touchend", function (e) {
+          var touchDistance = touchEndX - touchStartX;
+          if (touchDistance > 0) {
+            $(this).carousel("prev");
+          } else if (touchDistance < 0) {
+            $(this).carousel("next");
+          }
+        });
+      });
+    </script>
+
+    <!-- jquery for desktop view -->
+    <script>
+      var scrollCount = 0; // Number of simulated scrolls
+      var maxScrolls = 7; // Set the number of simulated scrolls
+
+      // Change the backgound color of the svg on scroll for 7 different scrolls
+      var color = [
+        "#6411A9",
+        "#4B26CD",
+        "#2B2575",
+        "#15243B",
+        "#134CA2",
+        "#022B92",
+        "#01824D",
+      ];
+
+      var details = {
+        0: {
+          text1: "25M+ Downloads",
+          text2: "on appstore & google playstore",
+          focus: "text1",
+        },
+        1: {
+          text1: "The Next Big",
+          text2: "Blockchain",
+          text3: "Revolution",
+          focus: "text2",
+          image: true,
+        },
+        2: {
+          text1: "Powered by advance",
+          text2: "NASA",
+          text3: "algorithm",
+          focus: "text2",
+        },
+        3: {
+          text1: "Redefining",
+          text2: "UX Strategy",
+          text3: "and UI design",
+          focus: "text2",
+        },
+        4: {
+          text1: "Text Headline",
+          text2: "Text Headline",
+          text3: "Footer Headline",
+          focus: "text2",
+          image: true,
+        },
+        5: {
+          text: "Developing ERP Solution for",
+          text2: "Text Headline",
+          text3: "in furniture industry",
+          focus: "text2",
+        },
+        6: {
+          text1: "Biggest Classified",
+          text2: "East Asian",
+          text3: "Countries",
+          focus: "text2",
+        },
+      };
+
+      // Initialize the selected color
+      var selectedColor = color[0];
+
+      // Update the color of the first dot to blue
+      $(".dotsstro1").css("stroke", "rgb(0, 146, 255)");
+
+      //make image1 to block
+      $(".image1").css("display", "block");
+      $(".bgcolors").css("background-color", color[0]);
+      $("#transring").css("background-color", color[0]);
+
+      var scrollHandled = false;
+      var scrollThreshold = 30; // Adjust this threshold as needed
+      const path = document.querySelector("#Opaque_Ring"); //path of the white line
+      const pathLength = path.getTotalLength(); //length of the path
+      const oneUnit = pathLength / 7; //one unit of the path
+
+      // Listen for mousewheel or touch events
+      window.addEventListener("wheel", handleScroll);
+      window.addEventListener("touchmove", handleScroll);
+
+      function handleScroll(event) {
+        var deltaY = event.deltaY || event.touches[0].clientY;
+
+        //check if scrollCount is 0 then Text1 else Text2
+        if (scrollCount == 0) {
+          $("#Text1").css("display", "block");
+          $("#Text2").css("display", "none");
+          $("#text01").css("display", "block");
+          $("#text02").css("display", "block");
+          $("#text1").css("display", "none");
+          $("#text2").css("display", "none");
+          $("#text3").css("display", "none");
+        } else {
+          $("#Text2").css("display", "block");
+          $("#Text1").css("display", "none");
+          $("#text01").css("display", "none");
+          $("#text02").css("display", "none");
+          $("#text1").css("display", "block");
+          $("#text2").css("display", "block");
+          $("#text3").css("display", "block");
+        }
+
+        // Check if the absolute scroll distance is greater than the threshold
+        if (Math.abs(deltaY) >= scrollThreshold) {
+          // Increment or decrement the scroll count based on scroll direction
+          if (deltaY < 0 && scrollCount > 0) {
+            // Scrolling up, decrement scrollCount
+            $(".dotsstro" + (scrollCount + 1)).css(
+              "stroke",
+              "rgb(255, 255, 255)"
+            );
+            scrollCount--;
+          } else if (deltaY > 0 && scrollCount < maxScrolls - 1) {
+            // Scrolling down, increment scrollCount
+            $(".dotsstro" + (scrollCount + 2)).css(
+              "stroke",
+              "rgb(0, 146, 255)"
+            );
+            scrollCount++;
+          }
+          // Set the scrollHandled flag to true
+          scrollHandled = true;
+
+          // Reset the scrollHandled flag after a short delay
+          setTimeout(function () {
+            scrollHandled = false;
+          }, 300);
+
+          //update the path length
+          path.style.strokeDasharray =
+            130 * scrollCount + (scrollCount == 1 ? 0 : 20) + " " + 1000;
+          if (scrollCount == 0) {
+            path.style.strokeDasharray = 0 + " " + 1000;
+          }
+          // Change the background color based on the scroll count
+          $("#transring").css("background-color", color[scrollCount]);
+          $(".bgcolors").css("background-color", color[scrollCount]);
+          $("#text1").text(details[scrollCount].text1);
+          $("#text2").text(details[scrollCount].text2);
+          $("#text3").text(details[scrollCount].text3);
+          //set image i to block  and all other to none
+
+          $(".image" + (scrollCount + 1)).css("display", "block");
+          for (var i = 1; i <= 7; i++) {
+            if (i != scrollCount + 1) {
+              $(".image" + i).css("display", "none");
+            }
+          }
+
+          if (details[scrollCount].image) {
+            $(".award").css("display", "block");
+          } else {
+            $(".award").css("display", "none");
+          }
+        }
+
+        // Prevent the default scroll behavior to avoid page scrolling
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
